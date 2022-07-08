@@ -29,7 +29,11 @@ export const AppRoutingModule: Routes = [
       { path: 'add', component: ProductAddComponent },
     ],
   },
-
+  {
+    path: 'customer',
+    loadChildren: () =>
+      import('./customer/customer.module').then((m) => m.CustomerModule),
+  },
   { path: 'logout', component: LogoutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
