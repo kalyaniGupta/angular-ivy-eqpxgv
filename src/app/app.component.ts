@@ -24,7 +24,7 @@ export class AppComponent {
       if (isTimedOut) {
         console.log('session expired');
         this.logout();
-        this.router.navigate(['logout']); 
+        this.router.navigate(['logout']);
       }
     });
   }
